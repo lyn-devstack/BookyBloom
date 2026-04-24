@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Administrador.Agregar_pdf"
+    android:background="@color/coral">
+
+    <!--Toolbar-->
+    <RelativeLayout
+        android:id="@+id/toolbarRLAgregarPdf"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m_toolbar_height"
+        android:background="@color/white">
+
+        <ImageButton
+            android:id="@+id/Ib_regresar"
+            android:src="@drawable/ic_regresar"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/Txt_agregar_libro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/Txt_agregar_libro"
+            android:textStyle="bold"
+            android:textColor="@color/coral"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#cccccc"
+                android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <!--Subir pdf-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/LlAdjuntarPdf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/toolbarRLAgregarPdf">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/libros_agregar"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"/>
+
+        <ImageButton
+            android:id="@+id/AdjuntarPdfIb"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_subir_pdf"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--Datos del libro-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_below="@+id/LlAdjuntarPdf"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Titulo libro -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/pastelgreen">
+
+            <EditText
+                android:id="@+id/Et_titulo_libro"
+                android:hint="@string/Et_titulo_libro"
+                android:inputType="textPersonName|textCapWords"
+                android:padding="10dp"
+                android:background="@color/pastelgreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </EditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Descripcion -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/pastelgreen">
+
+            <EditText
+                android:id="@+id/Et_descripcion_libro"
+                android:hint="@string/Et_descripcion_libro"
+                android:inputType="textPersonName|textCapWords"
+                android:padding="10dp"
+                android:background="@color/pastelgreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </EditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Categoria select libro -->
+        <TextView
+            android:id="@+id/Tv_categoria_libro"
+            android:hint="@string/Tv_categoria_libro"
+            app:drawableEndCompat="@drawable/ic_display"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:textColor="#000"
+            android:background="@drawable/forma_edittext"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Subir libro -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/Btn_subir_libro"
+            android:text="@string/Btn_subir_libro"
+            android:textAllCaps="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center">
+
+        </com.google.android.material.button.MaterialButton>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</RelativeLayout>

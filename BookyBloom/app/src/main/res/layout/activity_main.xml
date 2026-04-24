@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/coral">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRLAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m_toolbar_height"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/Titulo_RL_Admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/Titulo_RL_Admin"
+            android:textColor="@color/coral"
+            android:textStyle="bold"/>
+
+        <View
+            android:background="#A47864"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/Fragments_Admin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarRLAdmin"
+        android:layout_above="@+id/View1" />
+
+    <View
+        android:id="@+id/View1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#A47864"
+        android:layout_above="@+id/Bottom_Nv_Admin"
+        />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/Bottom_Nv_Admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/baby_blue"
+        app:menu="@menu/menu_bottom_admin"
+        app:labelVisibilityMode="labeled"
+        />
+
+</RelativeLayout>

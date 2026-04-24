@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1022026882882",
+    "project_id": "booky-bloom---kotlin",
+    "storage_bucket": "booky-bloom---kotlin.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1022026882882:android:4bda3bdd77bd72239432db",
+        "android_client_info": {
+          "package_name": "com.lesliedev.bookybloom"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJ-T7DqRvEkyhKnkM0Ql2vxjaycq3Ze4A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

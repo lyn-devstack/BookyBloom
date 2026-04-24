@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragmentos_Cliente.Fragment_cliente_dashboard"
+    android:background="@color/coral">
+
+    <EditText
+        android:id="@+id/Buscar_categoria"
+        android:hint="@string/Buscar_categoria"
+        android:drawableStart="@drawable/ic_buscar"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="10dp"
+        android:background="@color/lectura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Libros mas vistos y mas descargados -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/LibrosMVMD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Buscar_categoria"
+        android:paddingTop="20dp"
+        android:orientation="horizontal">
+
+        <!-- Boton mas vistos -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/Btn_mas_vistos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Btn_mas_vistos"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"/>
+
+        <!-- Boton mas descargados -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/Btn_mas_descargados"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Btn_mas_descargados"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <!-- Lista de categorias -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categoriaRv"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/LibrosMVMD"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_categoria_cliente"/>
+
+</RelativeLayout>
